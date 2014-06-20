@@ -12,5 +12,4 @@ while repeat == True: #Makes sure the loop repeats
         table = int(table) #Converts table into an interger
         for x in range(12): #Repeats 12 times
             #Outputs tables
-            print(str(x+1) + " x " + str(table) + " = " + str(x+1*table))
-            
+            print(str(x+1) + " x " + str(table) + " = " + str((x+1)*table))
