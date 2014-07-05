@@ -23,15 +23,18 @@ There are 30 marks available and are awarded grades as follows:
 ###1 - Why do we represent data using binary when using computers *(1 mark)*
 
 ```
-answer here
+We use binary because it takes up less space than denary and can only have 2 values
 ```
 ###2 - How would we represent the number 147 in binary? *(1 mark)*
 ```
-answer here
+10010011
 ```
 ###3 - Can you convert the hexadecimal number **b5** to denary, there is a mark for you working. *(2 marks)*
 ```
-answer here
+B = 11, 5 = 5
+11 = 1011
+5 = 0101
+B5 = 10110101
 ```
 ###4 - Here is a function written is **pseudocode**.
 ```
@@ -47,12 +50,12 @@ ENDFUNCTION
 
 (a) What type of data is **users**? **(1 mark)**
 ```
-answer here
+A list or tuple
 ```
 
 (b) What type of data is returned by this function? **(1 mark)**
 ```
-answer here
+A string
 ```
 
 ##Errors
@@ -69,22 +72,22 @@ line7:		OUTPT mean
 
 (a) On which line is there a **syntax** error? **(1 mark)**
 ```
-answer here
+line 7
 ```
 
 (b) What is meant by a **syntax** error? **(1 mark)**
 ```
-answer here
+An error caused by an incorrectly spelt function or keyword.
 ```
 
 (c) Identify a logical error in the program and suggest how this might be fixed. **(2 marks)**
 ```
-answer here
+On line 6 mean becomes tot, this should be "mean <- tot/LEN(nums)"
 ```
 
 (d) Describe and give an example of the 3rd kind of programming error. **(2 marks)**
 ```
-answer here
+A run time error is an error that occurs while the program is running.
 ```
 
 ##Algortithms
