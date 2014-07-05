@@ -93,7 +93,17 @@ A run time error is an error that occurs while the program is running.
 ##Algortithms
 ###7 - Write an **algorithm** that if given a list of numbers could find the largest. Try to use [pseudocode](http://filestore2.aqa.org.uk/subjects/AQA-GCSE-COMPSCI-W-TRB-PSEU.PDF).
 ```
-answer here
+
+    nums = list(numbers)
+    FOR x TO range(LEN(nums)):
+        for y in range(i+1, LEN(nums)):
+            IF numbers[y] < numbers[x]:
+                numbers[y], numbers[x] <- numbers[x], numbers[y]
+    	    ENDIF
+    	ENDFOR
+    ENDFOR
+    	
+    print numbers
 ```
 
 ##Networking
@@ -101,27 +111,54 @@ answer here
 
 **Bus Topology (6 marks)**
 ```
-Describe:
+Describe: A bus network where nodes are connected in a daisy chain by a linear sequence of buses
 
-Advantages:
+Advantages: 
+	Easy to connect a computer to a linear bus
+	requires less cable length than a star topology
+	Works well for smaller networks
 
 Disadvantages:
+	Entire network shuts down if theres a break in the cable
+	Terminators are needed at both ends of the backbone cable
+	Difficult to identify the problem if the entire network shutsdown
+	Not ment to be used as a stand alon solution in a large building
+	Slower as more devices are added
 ```
 
 **Ring Topology (6 marks)**
 ```
-Describe:
+Describe: Each node attatches itself to two other nodes to form a ring
 
-Advantages:
+Advantages: 
+	Orderly, every device has acess to the token
+	Performs better than a bus topology under heavy load
+	Does not require a central node
+	Easy to identify faults
+	quite easy to install and configure
+	
 
 Disadvantages:
+	One malfunctioning workstation can create probelsm for the entire network
+	Moving, adding and changing devices can affect the network
+	Communication delay is linked to the number of nodes on the network
+	Bandwith is shared
+	More difficult to configure
 ```
 
 **Star Topology (6 marks)**
 ```
-Describe:
+Describe: One central hub links to each of the other nodes
 
 Advantages:
+	Better performace
+	Isolation of devices
+	Benefits from centralization
+	Easy to detect faults
+	No distruptions to the network when adding or removing devices
+	Installation is easy as each device only needs a link and one input/output port
 
 Disadvantages:
+	Whole network depends on one hub
+	Communication must pass through central hub, meaning that if the hub is compromised then so is all communication
 ```
