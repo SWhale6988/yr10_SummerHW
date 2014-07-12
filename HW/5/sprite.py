@@ -1,13 +1,12 @@
-#paste code here
-import pygame,sys #Imports modules
+import pygame,sys,time  #Imports the pygame module and the sys module for exiting the program
+#imports time for pauses
+pygame.init() #Initializes pygame
 
-pygame.init() #Initialises pygame
-
-screen = pygame.display.set_mode([225, 150]) #creates canvas
-w = pygame.Color("white") #Declares colours
+screen = pygame.display.set_mode([750, 750]) #Creates canvas
+w = pygame.Color("white") #Declares variables for the sprite(s)
 b = pygame.Color("black")
 
-data = [ #declares sprite
+frame1 = [                  #Declares the first frame row by row
 [b,b,w,b,b,b,b,b,w,b,b],
 [b,b,b,w,b,b,b,w,b,b,b],
 [b,b,w,w,w,w,w,w,w,b,b],
@@ -20,14 +19,37 @@ data = [ #declares sprite
 
     ]
 
-for y, row in enumerate(data): #mentions each item one by one
-    for x, colour in enumerate(row):
-        rect = pygame.Rect(x*15, y*15, 15, 15)
-        screen.fill(colour, rect=rect) #outputs sprite
 
-pygame.display.update() #Updates screen
 
-while True: #Quits game
-    for event in pygame.event.get():
+frame2 = [                  #Declares the second frame row by row
+[b,b,b,b,w,b,w,b,b,b,b],
+[b,b,b,w,b,b,b,w,b,b,b],
+[b,b,w,w,w,w,w,w,w,b,b],
+[b,w,w,b,w,w,w,b,w,w,b],
+[w,w,w,w,w,w,w,w,w,w,w],
+[w,b,w,w,w,w,w,w,w,b,w],
+[w,b,w,b,b,b,b,b,w,b,w],
+[b,b,w,w,b,b,b,w,w,b,b],
+
+
+    ]
+def draw_frame(surface,data):
+    for y, row in enumerate(data): #Mentions each item in the list one by one
+        for x, colour in enumerate(row): 
+            rect = pygame.Rect(x*15, y*15, 15, 15) #Defines pixel size
+            screen.fill(colour, rect=rect) #outputs sprite
+
+
+
+while True:
+    for event in pygame.event.get():  #Lets the user wuit the game
         if event.type == pygame.QUIT:
-            sys.exit
+            sys.exit #Exits
+
+    draw_frame(screen,frame1) #Displays first frame
+    pygame.display.update() #Updates screen
+    pygame.time.wait(500) #Waits 500ms
+    
+    draw_frame(screen,frame2) #displays second frame
+    pygame.display.update()#Updates screen
+    pygame.time.wait(500) #waits 500ms
