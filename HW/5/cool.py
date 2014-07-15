@@ -8,15 +8,13 @@ pygame.init() #initialises pygame
 display = pygame.display.set_mode((600,400)) #creates a pygame window
 FPS = pygame.time.Clock() #Sets up a clock
 pygame.display.set_caption("Cool stuff") #Sets window title
-
 imgx = 10 #x/y variables for the character
 imgy = 10
 
 white=(255,255,255) #Declares colours
 blue= (10,255,10)
-
+display.fill(white)
 while True: #main loop
-    window.Surface.Obj.fill(white) #fills screen with white
     pygame.draw.rect(display,blue,(imgx,imgy,imgx+30,imgy+30))#Draws a square based on imgy and imgx
 
     for event in pygame.event.get(): #checks for events
@@ -30,7 +28,7 @@ while True: #main loop
                 imgx += 30 #moves character right
             elif event.key in (K_UP,K_w): #If the key  is up or w
                 imgy -= 30 #moves character up
-            elif event.key in (K_DOWN): #If the key is down or s
+            elif event.key in (K_DOWN,K_s): #If the key is down or s
                 imgy += 30 #Moves character down
     pygame.display.update() #Updates screen
-    fps.tick(30) #FPS tick (30 FPS)
+    #clock.tick(30) #FPS tick (30 FPS)
